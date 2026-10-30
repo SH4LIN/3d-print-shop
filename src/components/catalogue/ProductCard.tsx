@@ -15,6 +15,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { cn } from "cn";
+import { getAssetPath } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
@@ -35,7 +36,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Image Container with Mist backdrop */}
         <div className="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-mist-light to-mist p-5 sm:p-6 flex items-center justify-center">
           <Image
-            src={product.image}
+            src={getAssetPath(product.image)}
             alt={product.name}
             width={400}
             height={400}
@@ -108,7 +109,7 @@ export function ProductCard({ product }: ProductCardProps) {
             {/* Modal Image Area */}
             <div className="md:col-span-5 bg-gradient-to-b from-mist-light to-mist p-6 sm:p-8 flex items-center justify-center relative min-h-[240px] md:min-h-[420px]">
               <Image
-                src={product.image}
+                src={getAssetPath(product.image)}
                 alt={product.name}
                 width={500}
                 height={500}
