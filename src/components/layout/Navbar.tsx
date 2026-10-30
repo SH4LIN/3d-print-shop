@@ -57,6 +57,27 @@ export function Navbar() {
 		""
 	)}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`;
 
+	// Robust active path detection handling trailing slashes, basePaths and sub-paths
+	const isLinkActive = React.useCallback(
+		(linkHref: string) => {
+			if (!pathname) return linkHref === "/";
+
+			const normalize = (path: string) => {
+				const trimmed = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+				return trimmed || "/";
+			};
+
+			const current = normalize(pathname);
+			const target = normalize(linkHref);
+
+			if (target === "/") {
+				return current === "/";
+			}
+			return current === target || current.startsWith(`${target}/`);
+		},
+		[pathname]
+	);
+
 	return (
 		<>
 			<header
@@ -89,24 +110,21 @@ export function Navbar() {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<nav className="hidden md:flex items-center gap-7 lg:gap-9">
+					<nav className="hidden md:flex items-center gap-1.5 lg:gap-2">
 						{siteConfig.navLinks.map((link) => {
-							const isActive = pathname === link.href;
+							const isActive = isLinkActive(link.href);
 							return (
 								<Link
 									key={link.href}
 									href={link.href}
 									className={cn(
-										"relative text-sm lg:text-base font-semibold transition-colors py-1",
+										"relative px-4 py-2 rounded-xl text-sm lg:text-base font-bold transition-all duration-200 flex items-center",
 										isActive
-											? "text-aubergine font-bold"
-											: "text-muted-foreground hover:text-aubergine"
+											? "bg-aubergine text-amber shadow-xs ring-1 ring-amber/30"
+											: "text-foreground/80 hover:text-aubergine hover:bg-mist/70"
 									)}
 								>
-									{link.label}
-									{isActive && (
-										<span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-amber" />
-									)}
+									<span>{link.label}</span>
 								</Link>
 							);
 						})}
@@ -209,7 +227,7 @@ export function Navbar() {
 
 					<nav className="flex flex-col gap-2 pt-1">
 						{siteConfig.navLinks.map((link) => {
-							const isActive = pathname === link.href;
+							const isActive = isLinkActive(link.href);
 							const Icon = navIcons[link.href as keyof typeof navIcons] || Grid3X3;
 
 							return (
@@ -220,7 +238,7 @@ export function Navbar() {
 									className={cn(
 										"flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-bold transition-all",
 										isActive
-											? "bg-aubergine text-white shadow-md ring-1 ring-amber/50"
+											? "bg-aubergine text-amber shadow-md ring-1 ring-amber/50"
 											: "text-foreground hover:bg-mist-light active:bg-mist"
 									)}
 								>
