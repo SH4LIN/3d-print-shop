@@ -33,15 +33,15 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <>
       <div className="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-mist-dark/60 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-amber/70">
-        {/* Image Container with Mist backdrop */}
-        <div className="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-mist-light to-mist p-5 sm:p-6 flex items-center justify-center">
-          <Image
-            src={getAssetPath(product.image)}
-            alt={product.name}
-            width={400}
-            height={400}
-            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-108"
-          />
+				{/* Image Container with Studio Mist backdrop */}
+				<div className="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-white via-mist-light/60 to-mist/40 p-6 flex items-center justify-center">
+					<Image
+						src={getAssetPath(product.image)}
+						alt={product.name}
+						width={400}
+						height={400}
+						className="h-full w-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-108 group-hover:drop-shadow-xl"
+					/>
 
           {/* Featured or Category Tag */}
           <div className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 flex flex-wrap gap-1.5 sm:gap-2">
@@ -106,16 +106,16 @@ export function ProductCard({ product }: ProductCardProps) {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="w-[92vw] sm:w-[90vw] md:max-w-3xl lg:max-w-4xl p-0 overflow-hidden bg-white rounded-2xl sm:rounded-3xl border border-mist-dark/40 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-12 max-h-[85vh] overflow-y-auto md:overflow-hidden">
-            {/* Modal Image Area */}
-            <div className="md:col-span-5 bg-gradient-to-b from-mist-light to-mist p-6 sm:p-8 flex items-center justify-center relative min-h-[240px] md:min-h-[420px]">
-              <Image
-                src={getAssetPath(product.image)}
-                alt={product.name}
-                width={500}
-                height={500}
-                priority
-                className="h-full w-full max-h-56 sm:max-h-72 md:max-h-80 object-contain drop-shadow-sm"
-              />
+						{/* Modal Image Area */}
+						<div className="md:col-span-5 bg-gradient-to-b from-white via-mist-light/60 to-mist/40 p-6 sm:p-8 flex items-center justify-center relative min-h-[240px] md:min-h-[420px]">
+							<Image
+								src={getAssetPath(product.image)}
+								alt={product.name}
+								width={500}
+								height={500}
+								priority
+								className="h-full w-full max-h-56 sm:max-h-72 md:max-h-80 object-contain drop-shadow-xl"
+							/>
               <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                 <Badge className="bg-aubergine text-white text-xs font-semibold px-2.5 py-1 rounded-lg">
                   {product.category}

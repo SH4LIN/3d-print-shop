@@ -57,208 +57,239 @@ export function Navbar() {
     ""
   )}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`;
 
-  return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xs py-2.5 sm:py-3 border-b border-mist-dark/50"
-          : "bg-transparent py-3 sm:py-4"
-      )}
-    >
-      <Container className="flex items-center justify-between w-full">
-        {/* Brand Logo & Name */}
-        <Link
-          href="/"
-          className="group flex items-center gap-2.5 sm:gap-3 z-50 text-decoration-none"
-        >
-          <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-sm border border-amber/30 transition-transform group-hover:scale-105 shrink-0 overflow-hidden">
-            <img
-              src={getAssetPath("/images/logo/N.svg")}
-              alt="NEEV Additive Manufacturing Logo"
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="font-brand tracking-wider text-xl sm:text-2xl font-bold leading-none text-aubergine group-hover:text-aubergine-light transition-colors">
-              NEEV
-            </span>
-            <span className="font-heading text-[10px] sm:text-[11px] font-semibold tracking-wider text-aubergine/80 uppercase mt-0.5">
-              Additive Manufacturing
-            </span>
-          </div>
-        </Link>
+	return (
+		<>
+			<header
+				className={cn(
+					"fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full",
+					scrolled
+						? "bg-white/95 backdrop-blur-md shadow-xs py-2.5 sm:py-3 border-b border-mist-dark/50"
+						: "bg-white/90 backdrop-blur-md py-3 sm:py-4 shadow-2xs border-b border-mist-dark/30"
+				)}
+			>
+				<Container className="flex items-center justify-between w-full">
+					{/* Brand Logo & Name */}
+					<Link
+						href="/"
+						className="group flex items-center gap-2.5 sm:gap-3 z-50 text-decoration-none"
+					>
+						<div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-sm border border-amber/30 transition-transform group-hover:scale-105 shrink-0 overflow-hidden">
+							<img
+								src={getAssetPath("/images/logo/N.svg")}
+								alt="NEEV Additive Manufacturing Logo"
+								className="h-full w-full object-contain"
+							/>
+						</div>
+						<div className="flex flex-col text-left">
+							<span className="font-brand tracking-wider text-xl sm:text-2xl font-bold leading-none text-aubergine group-hover:text-aubergine-light transition-colors">
+								NEEV
+							</span>
+							<span className="font-heading text-[10px] sm:text-[11px] font-semibold tracking-wider text-aubergine/80 uppercase mt-0.5">
+								Additive Manufacturing
+							</span>
+						</div>
+					</Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-7 lg:gap-9">
-          {siteConfig.navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "relative text-sm lg:text-base font-semibold transition-colors py-1",
-                  isActive
-                    ? "text-aubergine font-bold"
-                    : "text-muted-foreground hover:text-aubergine"
-                )}
-              >
-                {link.label}
-                {isActive && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-amber" />
-                )}
-              </Link>
-            );
-          })}
-        </nav>
+					{/* Desktop Navigation */}
+					<nav className="hidden md:flex items-center gap-7 lg:gap-9">
+						{siteConfig.navLinks.map((link) => {
+							const isActive = pathname === link.href;
+							return (
+								<Link
+									key={link.href}
+									href={link.href}
+									className={cn(
+										"relative text-sm lg:text-base font-semibold transition-colors py-1",
+										isActive
+											? "text-aubergine font-bold"
+											: "text-muted-foreground hover:text-aubergine"
+									)}
+								>
+									{link.label}
+									{isActive && (
+										<span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-amber" />
+									)}
+								</Link>
+							);
+						})}
+					</nav>
 
-        {/* Desktop Right CTAs: Stall Badge + WhatsApp */}
-        <div className="hidden md:flex items-center gap-3">
-          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber/15 text-aubergine-dark text-xs font-bold border border-amber/30">
-            <MapPin className="h-3.5 w-3.5 text-amber-dark" />
-            <span>Stall 16 • Mega Diwali Event</span>
-          </div>
+					{/* Desktop Right CTAs: Stall Badge + WhatsApp */}
+					<div className="hidden md:flex items-center gap-3">
+						<div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber/15 text-aubergine-dark text-xs font-bold border border-amber/30">
+							<MapPin className="h-3.5 w-3.5 text-amber-dark" />
+							<span>Stall 16 • Mega Diwali Event</span>
+						</div>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              buttonVariants({ variant: "default" }),
-              "bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-10 px-4.5 rounded-xl shadow-xs transition-all hover:shadow hover:scale-102 flex items-center gap-2"
-            )}
-          >
-            <MessageCircle className="h-4 w-4" />
-            <span>WhatsApp</span>
-          </a>
-        </div>
+						<a
+							href={whatsappUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={cn(
+								buttonVariants({ variant: "default" }),
+								"bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-10 px-4.5 rounded-xl shadow-xs transition-all hover:shadow hover:scale-102 flex items-center gap-2"
+							)}
+						>
+							<MessageCircle className="h-4 w-4" />
+							<span>WhatsApp</span>
+						</a>
+					</div>
 
-        {/* Mobile Menu Toggle Button */}
-        <button
-          type="button"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          onClick={() => setIsOpen(!isOpen)}
-          className={cn(
-            "md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-xl transition-all cursor-pointer",
-            isOpen
-              ? "bg-aubergine text-white shadow-md"
-              : scrolled
-              ? "bg-mist/70 text-aubergine hover:bg-mist"
-              : "bg-white/85 text-aubergine shadow-xs backdrop-blur-xs hover:bg-white"
-          )}
-        >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+					{/* Mobile Menu Toggle Button */}
+					<button
+						type="button"
+						aria-label={isOpen ? "Close menu" : "Open menu"}
+						aria-expanded={isOpen}
+						onClick={() => setIsOpen(!isOpen)}
+						className={cn(
+							"md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-xl transition-all cursor-pointer",
+							isOpen
+								? "bg-aubergine text-white shadow-md"
+								: "bg-mist/80 text-aubergine hover:bg-mist border border-mist-dark/40"
+						)}
+					>
+						{isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+					</button>
+				</Container>
+			</header>
 
-        {/* Mobile Drawer Navigation Backdrop */}
-        <div
-          className={cn(
-            "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden",
-            isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          )}
-          onClick={() => setIsOpen(false)}
-        />
+			{/* Mobile Drawer Navigation Backdrop */}
+			<div
+				className={cn(
+					"fixed inset-0 z-50 bg-black/60 backdrop-blur-xs transition-opacity duration-300 md:hidden",
+					isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+				)}
+				onClick={() => setIsOpen(false)}
+			/>
 
-        {/* Mobile Drawer Navigation Pane */}
-        <div
-          className={cn(
-            "fixed top-0 right-0 bottom-0 z-45 w-[85vw] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out md:hidden flex flex-col justify-between p-6 pt-20 border-l border-mist-dark/40",
-            isOpen ? "translate-x-0" : "translate-x-full"
-          )}
-        >
-          {/* Top Section */}
-          <div className="space-y-5">
-            <div className="border-b border-mist pb-4 flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                Stall 16 • Newcastle, NSW
-              </span>
-              <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber/20 text-aubergine">
-                Live Event
-              </span>
-            </div>
+			{/* Mobile Drawer Navigation Pane */}
+			<div
+				style={{ backgroundColor: "#ffffff" }}
+				className={cn(
+					"fixed top-0 right-0 bottom-0 z-50 h-[100dvh] w-[85vw] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out md:hidden flex flex-col justify-between p-6 border-l border-mist-dark/40 overflow-y-auto",
+					isOpen ? "translate-x-0" : "translate-x-full"
+				)}
+			>
+				{/* Top Section */}
+				<div className="space-y-4">
+					{/* Drawer Header with Logo & Close Button */}
+					<div className="flex items-center justify-between pb-4 border-b border-mist">
+						<div className="flex items-center gap-2.5">
+							<div className="flex h-9 w-9 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-xs border border-amber/30">
+								<img
+									src={getAssetPath("/images/logo/N.svg")}
+									alt="NEEV Logo"
+									className="h-full w-full object-contain"
+								/>
+							</div>
+							<div className="flex flex-col text-left">
+								<span className="font-brand tracking-wider text-lg font-bold leading-none text-aubergine">
+									NEEV
+								</span>
+								<span className="font-heading text-[9px] font-semibold tracking-wider text-aubergine/80 uppercase mt-0.5">
+									Additive Manufacturing
+								</span>
+							</div>
+						</div>
 
-            <nav className="flex flex-col gap-2">
-              {siteConfig.navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                const Icon =
-                  navIcons[link.href as keyof typeof navIcons] || Grid3X3;
+						<button
+							type="button"
+							onClick={() => setIsOpen(false)}
+							aria-label="Close menu"
+							className="flex h-9 w-9 items-center justify-center rounded-xl bg-mist hover:bg-mist-dark text-aubergine transition-colors cursor-pointer"
+						>
+							<X className="h-5 w-5" />
+						</button>
+					</div>
 
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-bold transition-all",
-                      isActive
-                        ? "bg-aubergine text-white shadow-md ring-1 ring-amber/50"
-                        : "text-foreground hover:bg-mist-light active:bg-mist"
-                    )}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={cn(
-                          "flex h-9 w-9 items-center justify-center rounded-xl",
-                          isActive
-                            ? "bg-white/15 text-amber"
-                            : "bg-mist text-aubergine"
-                        )}
-                      >
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <span>{link.label}</span>
-                    </div>
-                    <ChevronRight
-                      className={cn(
-                        "h-4 w-4 transition-transform",
-                        isActive ? "text-amber" : "text-muted-foreground/60"
-                      )}
-                    />
-                  </Link>
-                );
-              })}
-            </nav>
-          </div>
+					<div className="flex items-center justify-between py-1">
+						<span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+							Stall 16 • Newcastle, NSW
+						</span>
+						<span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber/20 text-aubergine">
+							Live Event
+						</span>
+					</div>
 
-          {/* Bottom Card / Contact CTA */}
-          <div className="pt-5 border-t border-mist space-y-3.5">
-            {/* Instagram 10% Discount Reminder */}
-            <div className="rounded-2xl bg-gradient-to-br from-amber/15 via-mist-light to-white p-4 border border-amber/40 space-y-1 text-left">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-aubergine">
-                <Sparkles className="h-3.5 w-3.5 text-amber-dark" />
-                <span>Grab 10% Off Today</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Follow <strong>@neev_au</strong> on Instagram &amp; comment on any reel to claim your discount at Stall 16!
-              </p>
-            </div>
+					<nav className="flex flex-col gap-2 pt-1">
+						{siteConfig.navLinks.map((link) => {
+							const isActive = pathname === link.href;
+							const Icon =
+								navIcons[link.href as keyof typeof navIcons] || Grid3X3;
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                buttonVariants({ variant: "default" }),
-                "w-full bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-12 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all"
-              )}
-            >
-              <MessageCircle className="h-4 w-4" />
-              <span>Chat on WhatsApp (+61 491 600 869)</span>
-            </a>
+							return (
+								<Link
+									key={link.href}
+									href={link.href}
+									onClick={() => setIsOpen(false)}
+									className={cn(
+										"flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-bold transition-all",
+										isActive
+											? "bg-aubergine text-white shadow-md ring-1 ring-amber/50"
+											: "text-foreground hover:bg-mist-light active:bg-mist"
+									)}
+								>
+									<div className="flex items-center gap-3">
+										<div
+											className={cn(
+												"flex h-9 w-9 items-center justify-center rounded-xl",
+												isActive
+													? "bg-white/15 text-amber"
+													: "bg-mist text-aubergine"
+											)}
+										>
+											<Icon className="h-4 w-4" />
+										</div>
+										<span>{link.label}</span>
+									</div>
+									<ChevronRight
+										className={cn(
+											"h-4 w-4 transition-transform",
+											isActive ? "text-amber" : "text-muted-foreground/60"
+										)}
+									/>
+								</Link>
+							);
+						})}
+					</nav>
+				</div>
 
-            <div className="text-center space-y-0.5">
-              <p className="font-brand text-xs font-bold tracking-wider text-aubergine">
-                NEEV ADDITIVE MANUFACTURING
-              </p>
-              <p className="font-heading text-[10px] text-muted-foreground">
-                Ideas, Made Real. • Central Coast, NSW
-              </p>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </header>
-  );
+				{/* Bottom Card / Contact CTA */}
+				<div className="pt-5 border-t border-mist space-y-3.5 mt-auto">
+					{/* Instagram 10% Discount Reminder */}
+					<div className="rounded-2xl bg-gradient-to-br from-amber/15 via-mist-light to-white p-4 border border-amber/40 space-y-1 text-left">
+						<div className="flex items-center gap-1.5 text-xs font-bold text-aubergine">
+							<Sparkles className="h-3.5 w-3.5 text-amber-dark" />
+							<span>Grab 10% Off Today</span>
+						</div>
+						<p className="text-xs text-muted-foreground leading-relaxed">
+							Follow <strong>@neev_au</strong> on Instagram &amp; comment on any reel to claim your discount at Stall 16!
+						</p>
+					</div>
+
+					<a
+						href={whatsappUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={cn(
+							buttonVariants({ variant: "default" }),
+							"w-full bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-12 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all"
+						)}
+					>
+						<MessageCircle className="h-4 w-4" />
+						<span>Chat on WhatsApp (+61 491 600 869)</span>
+					</a>
+
+					<div className="text-center space-y-0.5">
+						<p className="font-brand text-xs font-bold tracking-wider text-aubergine">
+							NEEV ADDITIVE MANUFACTURING
+						</p>
+						<p className="font-heading text-[10px] text-muted-foreground">
+							Ideas, Made Real. • Central Coast, NSW
+						</p>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
