@@ -2,6 +2,8 @@ export const siteConfig = {
 	name: "NEEV Additive Manufacturing",
 	shortName: "NEEV",
 	tagline: "Ideas, Made Real.",
+	domain: "neevadditivemanufacturing.com.au",
+	url: "https://neevadditivemanufacturing.com.au",
 	description:
 		"Australian additive manufacturing studio based on the Central Coast, NSW. Specialising in high-detail devotional art, optical diffusion lamps, Smart NFC business stands, fidget clickers, and precision B2B prototypes using Bambu Lab technology.",
 

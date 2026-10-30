@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "3d-print-shop";
-const basePath = isGithubActions ? `/${repoName}` : process.env.NEXT_PUBLIC_BASE_PATH || "";
+// Custom domain is active (neevadditivemanufacturing.com.au), so site is served from root '/'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
 	output: "export",
