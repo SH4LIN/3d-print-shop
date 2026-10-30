@@ -18,13 +18,11 @@ export function Footer() {
 							href="/"
 							className="inline-flex items-center gap-2.5 sm:gap-3 text-white text-decoration-none group"
 						>
-							<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-aubergine text-amber p-1.5 border border-amber/40 shadow-xs group-hover:scale-105 transition-transform">
-								<img
-									src={getAssetPath("/images/logo/N.svg")}
-									alt="NEEV Logo"
-									className="h-full w-full object-contain"
-								/>
-							</div>
+							<img
+								src={getAssetPath("/icon.png")}
+								alt="NEEV Logo"
+								className="h-10 w-10 object-contain shrink-0 group-hover:scale-105 transition-transform"
+							/>
 							<div className="flex flex-col text-left">
 								<span className="font-brand tracking-wider text-xl font-bold leading-none text-white">
 									NEEV

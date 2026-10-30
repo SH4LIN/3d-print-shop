@@ -73,13 +73,11 @@ export function Navbar() {
 						href="/"
 						className="group flex items-center gap-2.5 sm:gap-3 z-50 text-decoration-none"
 					>
-						<div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-sm border border-amber/30 transition-transform group-hover:scale-105 shrink-0 overflow-hidden">
-							<img
-								src={getAssetPath("/images/logo/N.svg")}
-								alt="NEEV Additive Manufacturing Logo"
-								className="h-full w-full object-contain"
-							/>
-						</div>
+						<img
+							src={getAssetPath("/icon.png")}
+							alt="NEEV Additive Manufacturing Logo"
+							className="h-10 w-10 sm:h-11 sm:w-11 object-contain shrink-0 transition-transform group-hover:scale-105"
+						/>
 						<div className="flex flex-col text-left">
 							<span className="font-brand tracking-wider text-xl sm:text-2xl font-bold leading-none text-aubergine group-hover:text-aubergine-light transition-colors">
 								NEEV
@@ -175,13 +173,11 @@ export function Navbar() {
 					{/* Drawer Header with Logo & Close Button */}
 					<div className="flex items-center justify-between pb-4 border-b border-mist">
 						<div className="flex items-center gap-2.5">
-							<div className="flex h-9 w-9 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-xs border border-amber/30">
-								<img
-									src={getAssetPath("/images/logo/N.svg")}
-									alt="NEEV Logo"
-									className="h-full w-full object-contain"
-								/>
-							</div>
+							<img
+								src={getAssetPath("/icon.png")}
+								alt="NEEV Logo"
+								className="h-9 w-9 object-contain shrink-0"
+							/>
 							<div className="flex flex-col text-left">
 								<span className="font-brand tracking-wider text-lg font-bold leading-none text-aubergine">
 									NEEV
