@@ -5,9 +5,9 @@
 @font-face {
 	font-family: "Blanka";
 	src:
-		url("/3d-print-shop/fonts/blanka.otf") format("opentype"),
-		url("/fonts/blanka.otf") format("opentype");
-	font-weight: 400 900;
+		url("/fonts/blanka.otf") format("opentype"),
+		url("/fonts/blanka-regular.otf") format("opentype");
+	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
