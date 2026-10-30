@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans, MuseoModerno } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site-config";
 import "./globals.css";
 
-// Display / Headings font - modern, geometric, industrial crafted feel
-const outfit = Outfit({
+// MuseoModerno for Headings & Tagline
+const museoModerno = MuseoModerno({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-// Primary Body font - exceptionally clean, legible, modern human sans
+// Plus Jakarta Sans for ultra-clean body copy
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -25,12 +25,14 @@ export const metadata: Metadata = {
   title: `${siteConfig.name} | ${siteConfig.tagline}`,
   description: siteConfig.description,
   keywords: [
-    "3D Printing",
-    "Rapid Prototyping",
-    "FDM Printing",
-    "3D printed gifts",
+    "NEEV Additive Manufacturing",
+    "3D Printing Australia",
+    "Central Coast 3D Printing",
+    "Shivling 3D print",
+    "Smart NFC Business Stand",
     "Exhibition catalogue",
-    "Custom 3D prints",
+    "Bambu Lab 3D printing",
+    "Custom 3D prints NSW",
   ],
 };
 
@@ -42,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${outfit.variable} h-full antialiased overflow-x-hidden`}
+      className={`${jakarta.variable} ${museoModerno.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className="min-h-full flex flex-col bg-mist-light text-foreground font-sans text-base leading-relaxed selection:bg-amber selection:text-aubergine-dark overflow-x-hidden w-full relative">
         <Navbar />

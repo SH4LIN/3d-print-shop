@@ -1,26 +1,30 @@
 [
   {
-    "question": "Can I buy the items on display at the stall right now?",
-    "answer": "Yes! All pieces on our exhibition table are available for immediate purchase. You can pay via UPI, Cash, or Card right at the booth. If your preferred color or size is already sold out, we can 3D print a fresh one for you and deliver it to your home."
+    "question": "Where is your exhibition stall located and can I purchase items immediately?",
+    "answer": "We are at Stall 16 at the Mega Diwali Event in Newcastle, NSW! All products showcased on our display table are fully finished and ready for immediate purchase. You can take them home today or ask our team for custom color variations."
   },
   {
-    "question": "How do custom 3D print orders work?",
-    "answer": "Found a 3D model on Thingiverse, Printables, or MakerWorld? Or need a personalized nameplate, photo lithophane, or prototype? Simply send us the link, image, or STL file on WhatsApp. We will inspect the model, advise on print settings, and give you an instant quote."
+    "question": "How do I claim the 10% exhibition discount?",
+    "answer": "Simply follow our Instagram account (@neev_au) and leave a comment on any of our reels! Show your screen to us at Stall 16 (or send a screenshot via WhatsApp/Instagram DM), and we will immediately apply 10% off your entire order."
   },
   {
-    "question": "What colors and filament finishes are available?",
-    "answer": "We stock over 20+ premium filament options: Silk Rainbow (color-shifting), Dual-Color Silk, Glow in the Dark, High-Shine Gold/Bronze, Matte Pastels, and durable PETG. Ask to see our physical filament swatches at the booth!"
+    "question": "Can I bring my own 3D files (STL/OBJ) or Thingiverse/Printables links?",
+    "answer": "Yes, absolutely! We love custom projects. Whether you found a 3D model online on Thingiverse, MakerWorld, or Printables, or designed your own CAD file, simply send us the link or file via WhatsApp. We will inspect the geometry, advise on optimal print settings, and provide an instant quote."
   },
   {
-    "question": "How durable are 3D printed items?",
-    "answer": "Our prints are engineered with reinforced infill and tuned wall perimeters for everyday handling. Fidget clickers and articulated toys are built specifically to withstand repeated movement, and functional home decor pieces are sturdy and long-lasting."
+    "question": "What filament finishes and materials do you stock?",
+    "answer": "We maintain a wide range of specialized materials including Silk Dual-Tone & Rainbow (featured on our Shivling and Ram Mandir models), authentic Wood-filled & Copper-filled composites, non-reflective Matte Pastels, and high-impact engineering PETG."
   },
   {
-    "question": "How long do custom orders take to print and deliver?",
-    "answer": "Most custom prints take 24 to 48 hours to print, clean, and quality-check. You can choose home delivery or arrange local pickup. During the exhibition weekend, we prioritize event orders!"
+    "question": "What is the typical turnaround time for custom print jobs?",
+    "answer": "Custom print turnaround is usually 24 to 48 hours depending on the size and complexity of the model. For event orders placed during the exhibition weekend, we prioritize queue scheduling."
   },
   {
-    "question": "How do I claim the exhibition special offer?",
-    "answer": "Just tap the WhatsApp button on this site or mention to us at the stall that you scanned the QR code. You will automatically receive our exhibition discount on custom orders and bundle purchases."
+    "question": "What are your delivery and pickup options?",
+    "answer": "We offer three flexible options: (1) Stall pickup before the Mega Diwali Event concludes, (2) Local pickup across the Central Coast, NSW, or (3) Tracked courier delivery shipped anywhere across Australia straight to your door."
+  },
+  {
+    "question": "What technology and printers do you use?",
+    "answer": "NEEV Additive Manufacturing was founded 3 years ago delivering precision B2B engineering prototypes. We run a multi-unit Bambu Lab high-speed multi-material additive manufacturing setup capable of ultra-fine 0.08mm layer stepping and seamless multi-color transitions using renewable plant-based biopolymers."
   }
 ]

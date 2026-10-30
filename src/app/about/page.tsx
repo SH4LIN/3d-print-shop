@@ -3,40 +3,41 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { buttonVariants } from "@/components/ui/button";
-import { Layers, ShieldCheck, Sparkles, Cpu, Target, ArrowRight } from "lucide-react";
+import { siteConfig } from "@/data/site-config";
+import { Layers, ShieldCheck, Sparkles, Cpu, Target, ArrowRight, MapPin, Zap } from "lucide-react";
 import { cn } from "cn";
 
 export const metadata: Metadata = {
-  title: "About Us | 3D Print Factory",
+  title: `About Us | ${siteConfig.name}`,
   description:
-    "Learn about 3D Print Factory's mission, technology, and precision additive manufacturing process.",
+    "Learn about NEEV Additive Manufacturing's origin, Bambu Lab technology farm, and precision custom 3D printing on the Central Coast, NSW.",
 };
 
 export default function AboutPage() {
   const highlights = [
     {
       icon: Cpu,
-      title: "Precision Additive Tech",
+      title: "Bambu Lab Additive Farm",
       description:
-        "We utilize state-of-the-art FDM 3D printing equipment tuned for tight micro-tolerances down to 0.12mm layer resolutions.",
+        "Utilising high-speed multi-material 3D printing systems tuned for tight micro-tolerances down to 0.08mm layer heights.",
     },
     {
       icon: ShieldCheck,
-      title: "Eco-Friendly Materials",
+      title: "Renewable Biopolymers",
       description:
-        "Primary reliance on high-grade PLA (biodegradable thermoplastic) and weather-resilient PETG for durable, non-toxic products.",
+        "Primary reliance on plant-based PLA composites (derived from fermented plant starch) rather than non-renewable petroleum plastics.",
     },
     {
       icon: Target,
-      title: "Rapid Turnaround",
+      title: "Rapid 24–48hr Prototyping",
       description:
-        "Fast print cycles and prototyping allow our clients to go from conceptual 3D render to physical hand-held part in days.",
+        "Fast print cycles allowing clients, small businesses, and makers to transform digital 3D models into physical parts in 24 to 48 hours.",
     },
     {
       icon: Sparkles,
-      title: "Custom Tailored",
+      title: "Handcrafted Art & Tech",
       description:
-        "No print run is too small. We specialize in one-off custom models, exhibition pieces, desk novelties, and personalized gifts.",
+        "Bridging intricate cultural heritage (Shivling, Ram Mandir) with contemporary smart technology (Smart NFC multi-link tap stands).",
     },
   ];
 
@@ -47,15 +48,18 @@ export default function AboutPage() {
         <div className="max-w-3xl mb-16 sm:mb-20">
           <AnimatedSection direction="up">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-amber bg-amber/15 px-3.5 py-1.5 rounded-full">
-              Our Story & Craft
+              Our Story &amp; Craft
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-aubergine mt-4 tracking-tight">
-              Transforming Digital Geometry Into Physical Reality
-            </h1>
+            <div className="mt-4 space-y-1">
+              <span className="font-brand text-xl sm:text-2xl text-amber block">
+                NEEV ADDITIVE MANUFACTURING
+              </span>
+              <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-aubergine tracking-tight">
+                Ideas, Made Real.
+              </h1>
+            </div>
             <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              3D Print Factory was founded with a clear focus: making high-detail,
-              artisan-quality additive manufacturing accessible to enthusiasts,
-              homeowners, and makers looking for unique items.
+              Founded 3 years ago on the Central Coast, NSW, NEEV began by developing high-precision B2B functional prototypes. Today, we bring that same industrial engineering discipline to consumer home décor, spiritual art, optical lighting, and smart business displays.
             </p>
           </AnimatedSection>
         </div>
@@ -64,22 +68,18 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center mb-24">
           <div className="lg:col-span-7 space-y-6">
             <AnimatedSection direction="left">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-aubergine tracking-tight">
-                Why 3D Printing?
+              <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-aubergine tracking-tight">
+                Engineering Discipline Meets Heritage Art
               </h2>
-              <div className="space-y-4 text-base sm:text-lg text-foreground/85 leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-foreground/85 leading-relaxed font-normal">
                 <p>
-                  Traditional manufacturing requires costly molds and large order
-                  minimums. Additive manufacturing completely changes this equation
-                  — allowing complex articulated structures, interlocking gear cubes,
-                  and intricate low-poly geometry to be manufactured on demand without
-                  waste.
+                  Traditional manufacturing relies on expensive tooling, rigid molds, and prohibitive order minimums. Additive manufacturing revolutionizes this paradigm — enabling organic tree supports, complex internal lattice cores, and individual custom lettering to be produced on demand with minimal material waste.
                 </p>
                 <p>
-                  Every piece on our website is sliced, tuned, and monitored
-                  layer-by-layer. We test infill densities, wall perimeters, and cooling
-                  temperatures to ensure the final product isn&apos;t just a visual novelty,
-                  but structurally dependable.
+                  From sacred spiritual centerpieces like our intricate <strong>Shiva Lingam</strong> with its multi-hooded Naga canopy to multi-link <strong>Smart NFC Tap Stations</strong> for local businesses, every single layer is computed, sliced, and monitored on our Bambu Lab printer farm.
+                </p>
+                <p>
+                  We continuously benchmark filament melt flow, wall perimeter adhesion, and cooling profiles to ensure every print delivered isn&apos;t just visually stunning, but structurally resilient for years of enjoyment.
                 </p>
               </div>
             </AnimatedSection>
@@ -87,20 +87,26 @@ export default function AboutPage() {
 
           <div className="lg:col-span-5">
             <AnimatedSection direction="right">
-              <div className="rounded-3xl border border-mist-dark/60 bg-white p-8 sm:p-10 shadow-md">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-aubergine text-amber mb-6 shadow-sm">
+              <div className="rounded-3xl border border-mist-dark/60 bg-white p-8 sm:p-10 shadow-md space-y-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-aubergine text-amber shadow-sm">
                   <Layers className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-aubergine mb-3 tracking-tight">
-                  Exhibition Showcase
-                </h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
-                  Come visit our booth to interact with physical prints, test tactile
-                  fidget clickers, and inspect layer lines up close.
-                </p>
+                <div className="space-y-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber block">
+                    Exhibition Presence
+                  </span>
+                  <h3 className="font-heading text-2xl font-bold text-aubergine tracking-tight">
+                    Mega Diwali Event 2026
+                  </h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    Come visit our team at <strong>Stall 16</strong> in Newcastle, NSW. Experience physical prints in person, test fidget clicker mechanisms, and inspect 0.08mm micro-stepping up close.
+                  </p>
+                </div>
                 <div className="border-t border-mist pt-5 flex items-center justify-between text-sm">
-                  <span className="font-semibold text-aubergine">Booth Status:</span>
-                  <span className="text-amber font-extrabold">Active Exhibition</span>
+                  <span className="font-semibold text-aubergine flex items-center gap-1.5">
+                    <MapPin className="h-4 w-4 text-amber" /> Stall 16:
+                  </span>
+                  <span className="text-amber font-extrabold">Active Booth</span>
                 </div>
               </div>
             </AnimatedSection>
@@ -110,8 +116,8 @@ export default function AboutPage() {
         {/* Highlights / Values Bento */}
         <div className="mb-24">
           <AnimatedSection direction="up">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-aubergine text-center mb-14 tracking-tight">
-              Our Core Pillars
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-aubergine text-center mb-14 tracking-tight">
+              Our Technological Standards
             </h2>
           </AnimatedSection>
 
@@ -129,10 +135,10 @@ export default function AboutPage() {
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-mist/60 text-aubergine mb-5">
                         <Icon className="h-6 w-6 text-aubergine" />
                       </div>
-                      <h3 className="font-bold text-lg sm:text-xl text-aubergine mb-2.5 tracking-tight">
+                      <h3 className="font-heading font-bold text-lg sm:text-xl text-aubergine mb-2.5 tracking-tight">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed font-normal">
                         {item.description}
                       </p>
                     </div>
@@ -146,12 +152,14 @@ export default function AboutPage() {
         {/* CTA to Catalogue */}
         <AnimatedSection direction="up">
           <div className="rounded-3xl bg-radial from-aubergine to-aubergine-dark text-white p-10 sm:p-14 text-center flex flex-col items-center shadow-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">
-              Explore Our Creations in Action
+            <span className="font-brand text-amber tracking-widest text-sm uppercase mb-2">
+              NEEV ADDITIVE MANUFACTURING
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">
+              Explore Our Live Exhibition Catalogue
             </h2>
-            <p className="text-base sm:text-lg text-mist/90 max-w-md mb-8 leading-relaxed font-normal">
-              Check out all articulated models, home accessories, and novelty items
-              currently on display.
+            <p className="text-base sm:text-lg text-mist/90 max-w-lg mb-8 leading-relaxed font-normal">
+              Check out all 14 handcrafted pieces on display — from the Sacred Shivling and Ram Mandir to smart tap stands and wavy lamps.
             </p>
             <Link
               href="/catalogue"
@@ -160,7 +168,7 @@ export default function AboutPage() {
                 "bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-base h-12 px-7 rounded-xl flex items-center gap-2 shadow-md hover:scale-[1.02] transition-all"
               )}
             >
-              <span>View Full Catalogue</span>
+              <span>Browse Full Collection</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>

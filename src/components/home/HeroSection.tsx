@@ -10,6 +10,7 @@ import {
   Palette,
   CheckCircle2,
   Flame,
+  MapPin,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { buttonVariants } from "@/components/ui/button";
@@ -23,12 +24,12 @@ export function HeroSection() {
     /[^0-9]/g,
     ""
   )}?text=${encodeURIComponent(
-    "Hi! I scanned your QR code at the exhibition stall. I'd like to ask about the Articulated Dragon / custom prints!"
+    "Hi NEEV team! I scanned your QR code at Stall 16 (Mega Diwali Event). I'm interested in the Sacred Shivling and your 3D printed collection!"
   )}`;
 
   return (
     <section className="relative overflow-hidden w-full bg-radial from-aubergine-dark via-aubergine to-[#1A0518] text-white py-12 sm:py-20 lg:py-24">
-      {/* Subtle geometric pattern overlay */}
+      {/* Geometric pattern overlay */}
       <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(#EAAA00_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
       {/* Decorative gradient glow spheres */}
@@ -43,24 +44,33 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2"
+              className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2"
             >
-              <Badge className="bg-amber/20 text-amber border border-amber/40 hover:bg-amber/30 px-3.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full shadow-xs">
-                <Sparkles className="h-3.5 w-3.5 mr-1.5 inline" /> Live Exhibition Stall
+              <Badge className="bg-amber/20 text-amber border border-amber/40 hover:bg-amber/30 px-3.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full shadow-xs flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                <span>Stall 16 • Mega Diwali Event, Newcastle</span>
+              </Badge>
+              <Badge className="bg-white/10 text-mist border border-white/20 text-xs py-1 px-3 rounded-full">
+                Central Coast, NSW
               </Badge>
             </motion.div>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] break-words"
+              className="space-y-2"
             >
-              3D Printed Toys, Fidgets &amp;{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
-                Custom Creations.
+              <span className="font-brand tracking-widest text-lg sm:text-2xl text-amber uppercase block">
+                NEEV Additive Manufacturing
               </span>
-            </motion.h1>
+              <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] break-words">
+                Ideas,{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber via-amber-light to-[#FFF0B3]">
+                  Made Real.
+                </span>
+              </h1>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -68,25 +78,30 @@ export function HeroSection() {
               transition={{ duration: 0.4, delay: 0.15 }}
               className="text-sm sm:text-lg text-mist/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal"
             >
-              Welcome to <strong>3D Print Factory</strong>! Every piece on our table is precision-crafted layer by layer. Pick up your favorite model directly from our stall today, or ask us to print your custom idea in your dream color.
+              Welcome to our on-site exhibition showcase! Every piece on our table is precision 3D printed with micron-level detail using Bambu Lab technology. Browse our live collection, explore material finishes, or bring your own 3D ideas to life.
             </motion.p>
 
-            {/* Exhibition Special Offer Banner - Real reason to scan the QR code! */}
+            {/* Exhibition Special Offer Banner */}
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="rounded-2xl bg-white/10 border border-amber/40 p-4 sm:p-4.5 backdrop-blur-md text-left flex items-start gap-3.5 shadow-md"
+              className="rounded-2xl bg-white/10 border-2 border-amber/50 p-4 sm:p-5 backdrop-blur-md text-left flex items-start gap-3.5 shadow-lg shadow-amber/10"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber text-aubergine-dark shrink-0 mt-0.5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber text-aubergine-dark shrink-0 mt-0.5 shadow-sm">
                 <Tag className="h-5 w-5" />
               </div>
-              <div className="space-y-0.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber block">
-                  Exhibition Visitor Exclusive
-                </span>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-black uppercase tracking-wider text-amber">
+                    Exhibition Special Offer
+                  </span>
+                  <span className="text-[10px] font-extrabold uppercase bg-amber text-aubergine-dark px-1.5 py-0.5 rounded">
+                    10% OFF
+                  </span>
+                </div>
                 <p className="text-xs sm:text-sm text-white font-medium leading-snug">
-                  Show this screen at our stall to claim <strong>10% OFF</strong> custom prints, or ask for our bundle deals on fidgets and keychains!
+                  Follow us on Instagram <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-amber font-bold underline hover:text-amber-light">@neev_au</a>, leave a comment on any reel, and grab <strong>10% off</strong> your purchase at Stall 16 today!
                 </p>
               </div>
             </motion.div>
@@ -96,7 +111,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.25 }}
-              className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4"
+              className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
               <a
                 href="#catalogue"
@@ -105,7 +120,7 @@ export function HeroSection() {
                   "bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm sm:text-base px-6 sm:px-7 h-12 sm:h-13 rounded-xl shadow-lg shadow-amber/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                 )}
               >
-                <span>Browse All 12 Stall Prints</span>
+                <span>Explore Table Catalogue</span>
                 <ArrowDown className="h-4 w-4" />
               </a>
 
@@ -119,7 +134,7 @@ export function HeroSection() {
                 )}
               >
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-amber" />
-                <span>Chat with Maker</span>
+                <span>Chat via WhatsApp</span>
               </a>
             </motion.div>
 
@@ -133,28 +148,28 @@ export function HeroSection() {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
                 <CheckCircle2 className="h-4 w-4 text-amber shrink-0 mt-0.5 hidden sm:block" />
                 <div>
-                  <span className="block text-xs sm:text-sm font-bold text-white">Buy at Stall</span>
+                  <span className="block text-xs sm:text-sm font-bold text-white">Stall 16 Pickup</span>
                   <span className="text-[10px] sm:text-xs text-mist/75">Ready to take home</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
                 <Palette className="h-4 w-4 text-amber shrink-0 mt-0.5 hidden sm:block" />
                 <div>
-                  <span className="block text-xs sm:text-sm font-bold text-white">20+ Finishes</span>
-                  <span className="text-[10px] sm:text-xs text-mist/75">Silk, Glow &amp; Matte</span>
+                  <span className="block text-xs sm:text-sm font-bold text-white">Bambu Precision</span>
+                  <span className="text-[10px] sm:text-xs text-mist/75">0.08mm micro-stepping</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
                 <Sparkles className="h-4 w-4 text-amber shrink-0 mt-0.5 hidden sm:block" />
                 <div>
-                  <span className="block text-xs sm:text-sm font-bold text-white">Custom STLs</span>
-                  <span className="text-[10px] sm:text-xs text-mist/75">Printed to order</span>
+                  <span className="block text-xs sm:text-sm font-bold text-white">Custom 3D Orders</span>
+                  <span className="text-[10px] sm:text-xs text-mist/75">24-48hr turnaround</span>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column: Real Star Product Spotlight Card */}
+          {/* Right Column: Spotlight Product Card (Shivling) */}
           <div className="lg:col-span-5 flex justify-center w-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -166,49 +181,53 @@ export function HeroSection() {
               <div className="flex items-center justify-between pb-3.5 border-b border-white/15">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-amber">
                   <Flame className="h-4 w-4 fill-amber" />
-                  <span>Stall Top Pick</span>
+                  <span>Stall Spotlight Piece</span>
                 </div>
-                <span className="text-[11px] font-semibold text-mist/80 bg-white/10 px-2.5 py-0.5 rounded-full">
-                  On Display Today
+                <span className="text-[11px] font-semibold text-mist/90 bg-amber/20 text-amber px-2.5 py-0.5 rounded-full border border-amber/30">
+                  On Display at Stall 16
                 </span>
               </div>
 
-              {/* Product Visual Container */}
-              <div className="my-5 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 p-6 flex items-center justify-center relative border border-white/10 aspect-4/3">
+              {/* Product Visual Container with Real Photo */}
+              <div className="my-4 rounded-2xl bg-gradient-to-b from-white/15 to-white/5 p-4 flex items-center justify-center relative border border-white/10 aspect-4/3 overflow-hidden">
                 <Image
-                  src={getAssetPath("/images/products/placeholder-1.svg")}
-                  alt="Articulated Crystal Dragon"
-                  width={320}
-                  height={320}
+                  src={getAssetPath("/images/products/shivling.jpg")}
+                  alt="Sacred Shiva Lingam (Shivling) 3D Print"
+                  width={400}
+                  height={400}
                   priority
-                  className="h-full w-full max-h-52 object-contain drop-shadow-lg"
+                  className="h-full w-full object-contain drop-shadow-2xl"
                 />
-                <Badge className="absolute bottom-3 left-3 bg-aubergine text-white text-[11px] font-semibold">
-                  Movable Joint Design
+                <Badge className="absolute bottom-3 left-3 bg-aubergine-dark/90 text-amber border border-amber/40 text-[11px] font-bold">
+                  Multi-Hooded Naga Canopy
                 </Badge>
               </div>
 
               {/* Product Info & Direct Action */}
               <div className="space-y-3">
                 <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight">
-                    Articulated Crystal Dragon
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-white tracking-tight">
+                    Sacred Shiva Lingam
                   </h3>
-                  <p className="text-xs text-mist/85 mt-1 leading-relaxed">
-                    Satisfying fluid movement with individually hinged segments. Printed in single-pass FDM with no assembly required.
+                  <p className="text-xs text-mist/85 mt-1.5 leading-relaxed">
+                    Intricately detailed Shiva Lingam with multi-hooded Naga serpent canopy, ornamental yoni base with spout, decorative lotus motifs, and central Om (ॐ) medallion. Designed as a sacred home, pooja room, and temple décor piece.
                   </p>
                 </div>
 
-                {/* Color swatches hint */}
-                <div className="pt-2 flex items-center justify-between text-xs">
-                  <span className="text-mist/75 font-medium">Available Colors:</span>
-                  <div className="flex items-center gap-1.5">
-                    <span className="h-3.5 w-3.5 rounded-full bg-gradient-to-tr from-amber to-pink-500 ring-1 ring-white/50" title="Silk Rainbow" />
-                    <span className="h-3.5 w-3.5 rounded-full bg-emerald-400 ring-1 ring-white/50" title="Glow in the dark" />
-                    <span className="h-3.5 w-3.5 rounded-full bg-amber ring-1 ring-white/50" title="Silk Gold" />
-                    <span className="h-3.5 w-3.5 rounded-full bg-slate-900 ring-1 ring-white/50" title="Matte Black" />
-                    <span className="text-[10px] text-mist/70 pl-1">+16 more</span>
-                  </div>
+                {/* Key features bullets */}
+                <div className="pt-1 grid grid-cols-2 gap-1.5 text-[11px] text-mist/90">
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Central ॐ Medallion
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Lotus Yoni Base
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Silk Dual-Tone Finish
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Eco-friendly PLA
+                  </span>
                 </div>
 
                 <a
@@ -217,11 +236,11 @@ export function HeroSection() {
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: "default" }),
-                    "w-full bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-xs sm:text-sm h-11 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                    "w-full bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-xs sm:text-sm h-11 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 mt-2"
                   )}
                 >
                   <MessageCircle className="h-4 w-4" />
-                  <span>Reserve / Ask at Booth</span>
+                  <span>Inquire / Reserve at Stall 16</span>
                 </a>
               </div>
             </motion.div>

@@ -1,23 +1,35 @@
 export const siteConfig = {
-  name: "3D Print Factory",
-  tagline: "Precision Crafted. 3D Printed.",
+  name: "NEEV Additive Manufacturing",
+  shortName: "NEEV",
+  tagline: "Ideas, Made Real.",
   description:
-    "Discover our collection of unique 3D printed products — from articulated figurines to custom home decor. Precision-crafted, layer by layer.",
+    "Australian additive manufacturing studio based on the Central Coast, NSW. Specialising in high-detail devotional art, optical diffusion lamps, Smart NFC business stands, fidget clickers, and precision B2B prototypes using Bambu Lab technology.",
+
+  location: "Central Coast, NSW, Australia",
+
+  exhibition: {
+    event: "Mega Diwali Event",
+    stall: "Stall 16",
+    city: "Newcastle, NSW",
+    offer: "Follow us on Instagram @neev_au, leave a comment on one of our reels, and grab 10% OFF!",
+  },
 
   contact: {
+    phone: "+61 491 600 869",
     whatsapp: {
-      number: "+919876543210",
+      number: "+61491600869",
       message:
-        "Hi! I saw your products at the exhibition and I'm interested in learning more.",
+        "Hi NEEV team! I saw your exhibition stall at the Mega Diwali Event (Stall 16) and I'd like to ask about your 3D printed models.",
     },
-    email: "hello@3dprintfactory.com",
-    instagram: "https://instagram.com/3dprintfactory",
+    email: "Neev.additivemanufacturing@gmail.com",
+    instagram: "https://www.instagram.com/neev_au?psln=MTI3ZGxjZWdwNXZwZQ==",
+    instagramHandle: "@neev_au",
   },
 
   socials: {
-    instagram: "https://instagram.com/3dprintfactory",
-    facebook: "https://facebook.com/3dprintfactory",
-    youtube: "https://youtube.com/@3dprintfactory",
+    instagram: "https://www.instagram.com/neev_au?psln=MTI3ZGxjZWdwNXZwZQ==",
+    email: "mailto:Neev.additivemanufacturing@gmail.com",
+    whatsapp: "https://wa.me/61491600869",
   },
 
   navLinks: [
@@ -29,32 +41,33 @@ export const siteConfig = {
 
   categories: [
     "All",
-    "Figurines",
-    "Home & Decor",
-    "Gadgets",
-    "Custom Prints",
+    "Home & Pooja Decor",
+    "Lamps & Lighting",
+    "Fidget Clickers & Keychains",
+    "Smart NFC & Custom Prints",
+    "Prototypes & Models",
   ],
 
   process: [
     {
       step: 1,
-      title: "Design",
+      title: "Share Your File or Idea",
       description:
-        "Every product starts as a digital 3D model, carefully designed or selected for quality and detail.",
+        "Bring your own STL, OBJ, CAD file, Thingiverse link, or custom sketch. We inspect geometry and slice for optimal layer bonding.",
       icon: "Pencil",
     },
     {
       step: 2,
-      title: "Print",
+      title: "Select Finish & Filament",
       description:
-        "Using precision FDM technology, we build each piece layer by layer with premium filaments.",
+        "Choose from Silk Dual-Tone & Rainbow, real Wood & Copper composites, or velvety Matte Pastels printed with 0.08–0.28mm resolution stacks.",
       icon: "Printer",
     },
     {
       step: 3,
-      title: "Deliver",
+      title: "24-48hr Turnaround",
       description:
-        "Quality-checked and carefully packaged, your unique 3D printed product is ready to enjoy.",
+        "Printed on our high-speed Bambu Lab farm. Pick up directly at Stall 16, arrange Central Coast local pickup, or get tracked Australia-wide courier.",
       icon: "Package",
     },
   ],

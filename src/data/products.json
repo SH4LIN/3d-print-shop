@@ -1,182 +1,212 @@
 [
   {
     "id": "1",
-    "name": "Articulated Dragon",
-    "category": "Figurines",
-    "description": "A beautifully detailed articulated dragon with movable joints. Each segment is precision-printed for smooth, satisfying movement. Available in multiple colors.",
-    "shortDescription": "Movable joints, precision-printed detail",
-    "image": "/images/products/placeholder-1.svg",
+    "name": "Sacred Shiva Lingam (Shivling)",
+    "category": "Home & Pooja Decor",
+    "description": "Intricately detailed Shiva Lingam featuring a multi-hooded Naga serpent canopy, ornamental yoni base with directional spout, decorative lotus floral motifs, and a central Om (ॐ) medallion. Designed as an authentic spiritual centerpiece for your home, pooja mandir, or temple décor.",
+    "shortDescription": "Intricate Naga serpent canopy, lotus base & Om medallion",
+    "image": "/images/products/shivling.jpg",
     "featured": true,
     "specs": {
-      "material": "PLA",
-      "dimensions": "25cm x 10cm x 8cm",
-      "weight": "120g",
-      "printTime": "~8 hours"
+      "material": "Silk Dual-Tone & Rainbow PLA",
+      "dimensions": "16cm x 11cm x 11cm",
+      "weight": "145g",
+      "printTime": "High-detail 0.08mm stack"
     }
   },
   {
     "id": "2",
-    "name": "Geometric Planter",
-    "category": "Home & Decor",
-    "description": "Modern geometric planter with a low-poly design. Perfect for succulents and small plants. Features a drainage hole and removable saucer.",
-    "shortDescription": "Low-poly modern design with drainage",
-    "image": "/images/products/placeholder-2.svg",
+    "name": "Cute Stanley Cup Clicker Keychain",
+    "category": "Fidget Clickers & Keychains",
+    "description": "Ultra-satisfying tactile mechanical clicker styled as a miniature Stanley tumbler complete with handle and straw. Push the straw for a crisp, responsive mechanical click. Available in pastel pink, vivid orange, and royal purple with smooth keychain hardware.",
+    "shortDescription": "Tactile mechanical clicker with straw & handle",
+    "image": "/images/products/stanley-clicker.jpg",
     "featured": true,
     "specs": {
-      "material": "PETG",
-      "dimensions": "12cm x 12cm x 10cm",
-      "weight": "85g",
-      "printTime": "~4 hours"
+      "material": "Matte Pastel PLA",
+      "dimensions": "6.5cm x 4cm x 3.5cm",
+      "weight": "28g",
+      "printTime": "Internal clicker spring"
     }
   },
   {
     "id": "3",
-    "name": "Fidget Gear Cube",
-    "category": "Gadgets",
-    "description": "An interlocking gear cube that spins and rotates in all directions. A perfect desk toy for focus and relaxation. Printed as a single piece — no assembly required.",
-    "shortDescription": "Single-piece print, all gears move",
-    "image": "/images/products/placeholder-3.svg",
+    "name": "Ornate Elephant Tealight Candle Holder",
+    "category": "Home & Pooja Decor",
+    "description": "Intricately carved Indian royal elephant featuring traditional ornamental saddle detailing and a lotus-inspired tealight holder nestled on its back. Creates a warm festive glow for Diwali, spiritual spaces, and dining tables. Available in Royal Purple, Antique Slate, and Silk Gold.",
+    "shortDescription": "Ornate ceremonial elephant with lotus tealight cradle",
+    "image": "/images/products/elephant-tealight.jpg",
     "featured": true,
     "specs": {
-      "material": "PLA",
-      "dimensions": "6cm x 6cm x 6cm",
-      "weight": "45g",
-      "printTime": "~3 hours"
+      "material": "Silk Composite PLA",
+      "dimensions": "11cm x 8cm x 7cm",
+      "weight": "85g",
+      "printTime": "Fits standard tealights"
     }
   },
   {
     "id": "4",
-    "name": "Flexi Rex",
-    "category": "Figurines",
-    "description": "The classic flexible T-Rex! A fun, articulated dinosaur that can bend and pose. A crowd favourite at every exhibition. Great for kids and collectors alike.",
-    "shortDescription": "Flexible, poseable T-Rex print",
-    "image": "/images/products/placeholder-4.svg",
-    "featured": false,
+    "name": "Wavy Retro Optical Lamp with Tripod",
+    "category": "Lamps & Lighting",
+    "description": "Mid-century modern wavy basket lamp paired with an architectural tripod base. The specialized micro-textured diffuser gently scatters warm LED light with zero harsh glare, creating an inviting ambient atmosphere on bedside tables and credenzas.",
+    "shortDescription": "Sculptural textured wavy diffuser with tripod base",
+    "image": "/images/products/retro-lamp.jpg",
+    "featured": true,
     "specs": {
-      "material": "PLA",
-      "dimensions": "20cm x 8cm x 12cm",
-      "weight": "95g",
-      "printTime": "~6 hours"
+      "material": "Light-diffusing PETG & textured PLA",
+      "dimensions": "24cm x 15cm x 15cm",
+      "weight": "260g",
+      "printTime": "Warm LED socket compatible"
     }
   },
   {
     "id": "5",
-    "name": "Cable Organizer Set",
-    "category": "Gadgets",
-    "description": "Keep your desk tidy with these clip-on cable organizers. Set includes 5 clips in various sizes to hold different cable thicknesses. Adhesive backing included.",
-    "shortDescription": "5-piece desk cable management set",
-    "image": "/images/products/placeholder-5.svg",
-    "featured": false,
+    "name": "Ayodhya Ram Mandir Architectural Prototype",
+    "category": "Home & Pooja Decor",
+    "description": "Exquisitely detailed architectural scale model of the Ayodhya Ram Mandir. Accurately captures the multi-tiered shikharas, central dome, pillared mandapas, ornamental jali carvings, and towering flag spire in shimmering silk filament.",
+    "shortDescription": "Scale replica with tiered shikharas & carved columns",
+    "image": "/images/products/ram-mandir.jpg",
+    "featured": true,
     "specs": {
-      "material": "PLA",
-      "dimensions": "Various sizes",
-      "weight": "30g total",
-      "printTime": "~1.5 hours"
+      "material": "Silk Dual-Tone / Rainbow PLA",
+      "dimensions": "22cm x 14cm x 17cm",
+      "weight": "310g",
+      "printTime": "0.12mm high-precision"
     }
   },
   {
     "id": "6",
-    "name": "Hex Shelf Unit",
-    "category": "Home & Decor",
-    "description": "Honeycomb-shaped wall shelf that can be combined in any pattern. Mount multiple units to create a unique wall display. Holds lightweight items and small plants.",
-    "shortDescription": "Modular honeycomb wall display",
-    "image": "/images/products/placeholder-6.svg",
-    "featured": true,
+    "name": "Low-Poly Geometric Lion Statue",
+    "category": "Home & Pooja Decor",
+    "description": "Contemporary faceted geometric lion figurine with a confident, proud posture. Its sharp polygonal planes catch natural room lighting dynamically, making it a bold modern statement piece for executive desks, bookshelves, and entryways.",
+    "shortDescription": "Modern faceted polygonal lion for desk & shelf decor",
+    "image": "/images/products/lion-statue.jpg",
+    "featured": false,
     "specs": {
-      "material": "PLA+",
-      "dimensions": "15cm x 13cm x 8cm",
-      "weight": "110g",
-      "printTime": "~5 hours"
+      "material": "Matte Pastel Yellow PLA",
+      "dimensions": "20cm x 12cm x 9cm",
+      "weight": "190g",
+      "printTime": "Solid interior infill"
     }
   },
   {
     "id": "7",
-    "name": "Keychain Collection",
-    "category": "Gadgets",
-    "description": "A set of unique 3D printed keychains featuring geometric and pop-culture inspired designs. Lightweight, durable, and a great conversation starter.",
-    "shortDescription": "Unique geometric & pop-culture designs",
-    "image": "/images/products/placeholder-7.svg",
-    "featured": false,
+    "name": "Smart NFC Multi-Link Business Display Station",
+    "category": "Smart NFC & Custom Prints",
+    "description": "Professional contactless tap-to-connect business station. Embedded with NTAG215 NFC chips that instantly open your Google Reviews, Instagram profile, website, or digital payment page with a quick tap of any smartphone. Includes an integrated card holder slot and custom logo medallion.",
+    "shortDescription": "Instant phone tap for Google Reviews, Instagram & cards",
+    "image": "/images/products/nfc-business-station.jpg",
+    "featured": true,
     "specs": {
-      "material": "PLA",
-      "dimensions": "5cm x 3cm x 0.5cm",
-      "weight": "10g each",
-      "printTime": "~30 min each"
+      "material": "Heavy-duty Matte PLA + NFC chips",
+      "dimensions": "15cm x 13cm x 12cm",
+      "weight": "175g",
+      "printTime": "No app required for visitors"
     }
   },
   {
     "id": "8",
-    "name": "Lithophane Photo Frame",
-    "category": "Custom Prints",
-    "description": "Turn any photo into a stunning lithophane! When backlit, your photo appears in beautiful 3D relief. Custom-made from your image. A perfect personalised gift.",
-    "shortDescription": "Your photo in 3D-printed relief art",
-    "image": "/images/products/placeholder-8.svg",
-    "featured": true,
+    "name": "Ice Cream Cone Clicker Keychain",
+    "category": "Fidget Clickers & Keychains",
+    "description": "Delightful soft-serve swirl ice cream cone with cross-hatched waffle cone texture and a hidden internal mechanical switch. Press the swirl top for a crisp, tactile click that helps maintain focus and relieves daily stress.",
+    "shortDescription": "Pocket-sized textured waffle cone with crisp click action",
+    "image": "/images/products/ice-cream-clicker.jpg",
+    "featured": false,
     "specs": {
-      "material": "White PLA",
-      "dimensions": "15cm x 10cm x 0.3cm",
-      "weight": "40g",
-      "printTime": "~4 hours"
+      "material": "Dual-Color PLA",
+      "dimensions": "5.5cm x 3.2cm",
+      "weight": "22g",
+      "printTime": "Heavy-duty metal clip included"
     }
   },
   {
     "id": "9",
-    "name": "Mechanical Butterfly",
-    "category": "Figurines",
-    "description": "A delicate mechanical butterfly with wing mechanisms that actually move. Wind-up mechanism allows the wings to flutter. A true showcase of 3D printing precision.",
-    "shortDescription": "Wind-up fluttering wing mechanism",
-    "image": "/images/products/placeholder-9.svg",
+    "name": "James Webb Space Telescope (JWST) Scale Model",
+    "category": "Prototypes & Models",
+    "description": "Precision engineering prototype of humanity's premier deep-space observatory. Featuring the distinctive 18 hexagonal primary mirror segments in deep gold, multi-layer silver sunshield, instrument payload module, and articulated mast.",
+    "shortDescription": "18-segment hexagonal mirror & articulated sunshield",
+    "image": "/images/products/jwst-telescope.jpg",
     "featured": false,
     "specs": {
-      "material": "PLA",
-      "dimensions": "12cm wingspan",
-      "weight": "25g",
-      "printTime": "~3.5 hours"
+      "material": "Multi-material Engineering PLA",
+      "dimensions": "26cm x 20cm x 18cm",
+      "weight": "210g",
+      "printTime": "Multi-part assembly"
     }
   },
   {
     "id": "10",
-    "name": "Desk Organizer Tower",
-    "category": "Home & Decor",
-    "description": "Multi-tier rotating desk organizer with compartments for pens, clips, sticky notes, and more. The lazy-susan base allows 360° rotation for easy access.",
-    "shortDescription": "Rotating multi-compartment desk tower",
-    "image": "/images/products/placeholder-10.svg",
+    "name": "Modern Dual Spiral Swirl Table Lamp",
+    "category": "Lamps & Lighting",
+    "description": "Elegant helical twist lamps crafted in contrasting colorways (Emerald Green / White and Tangerine / Cream). The spiral ribs cast dramatic swirling shadow gradients on surrounding walls when illuminated.",
+    "shortDescription": "Helical spiral diffuser casting geometric ambient light",
+    "image": "/images/products/spiral-lamp.jpg",
     "featured": false,
     "specs": {
-      "material": "PLA+",
-      "dimensions": "12cm x 12cm x 20cm",
-      "weight": "180g",
-      "printTime": "~10 hours"
+      "material": "Light-diffusing PETG / PLA",
+      "dimensions": "22cm x 13cm x 13cm",
+      "weight": "230g",
+      "printTime": "Integrated cord channel"
     }
   },
   {
     "id": "11",
-    "name": "Phone Amplifier Stand",
-    "category": "Gadgets",
-    "description": "Acoustic phone amplifier that boosts your phone's speaker volume naturally — no batteries or electronics needed. Works by channeling sound through a curved horn design.",
-    "shortDescription": "Battery-free acoustic speaker boost",
-    "image": "/images/products/placeholder-11.svg",
+    "name": "Kumiko Japanese Cylindrical Lattice Lamp",
+    "category": "Lamps & Lighting",
+    "description": "Inspired by sacred Asanoha (hemp leaf) Japanese Kumiko woodworking. The dense geometric lattice allows gentle inner light diffusion, creating tranquil patterns across your meditation space or bedroom.",
+    "shortDescription": "Sacred Asanoha geometric lattice with ambient core",
+    "image": "/images/products/kumiko-lamp.jpg",
     "featured": false,
     "specs": {
-      "material": "PLA",
-      "dimensions": "18cm x 10cm x 8cm",
-      "weight": "90g",
-      "printTime": "~5 hours"
+      "material": "Wood-Filled PLA Composite",
+      "dimensions": "21cm x 11cm x 11cm",
+      "weight": "195g",
+      "printTime": "Real organic wood fibers"
     }
   },
   {
     "id": "12",
-    "name": "Custom Name Plate",
-    "category": "Custom Prints",
-    "description": "Personalised 3D name plate for your desk, door, or shelf. Choose your font style, color, and size. Makes a great gift or professional desk accessory.",
-    "shortDescription": "Personalised with your name & style",
-    "image": "/images/products/placeholder-12.svg",
+    "name": "Custom 3D Printed Business Desk Nameplate",
+    "category": "Smart NFC & Custom Prints",
+    "description": "Tailor-made freestanding executive nameplate with high-relief 3D typography, chamfered letters, and a weighted oval foundation. Customised with your company name, brand fonts, or personal title.",
+    "shortDescription": "Personalised 3D lettering with weighted display base",
+    "image": "/images/products/custom-nameplate.jpg",
     "featured": false,
     "specs": {
-      "material": "PLA",
-      "dimensions": "Custom sizing",
-      "weight": "Varies",
-      "printTime": "~2-4 hours"
+      "material": "Wood-filled & Copper-filled PLA",
+      "dimensions": "Customized per name",
+      "weight": "Varies by length",
+      "printTime": "24-48h custom turnaround"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Shubh Labh & Om Spiritual Wall Decor Set",
+    "category": "Home & Pooja Decor",
+    "description": "Traditional शुभ (Shubh) and लाभ (Labh) sacred lettering bordered with delicate lotus flowers and accompanied by an ornamental Om medallion. Designed to be lightweight and effortlessly wall-mounted using double-sided tape for entrance doorways, mandirs, and Diwali celebrations.",
+    "shortDescription": "Traditional शुभ & लाभ lettering with sacred lotus motifs",
+    "image": "/images/products/temple-frame.jpg",
+    "featured": false,
+    "specs": {
+      "material": "Silk Gold & Pearl White PLA",
+      "dimensions": "15cm x 15cm each",
+      "weight": "45g each",
+      "printTime": "Mounts with double-sided tape"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Ergonomic Headphone Stand & Tablet Dock",
+    "category": "Smart NFC & Custom Prints",
+    "description": "Minimalist architectural headphone cradle with ribbed acoustic dampening curves, paired with a universal tablet / iPad stand featuring an integrated Apple Pencil slot and organizer tray.",
+    "shortDescription": "Fluted headphone perch with accessory tray",
+    "image": "/images/products/headphone-stand.jpg",
+    "featured": false,
+    "specs": {
+      "material": "Tough PETG / Engineering PLA",
+      "dimensions": "24cm x 14cm x 12cm",
+      "weight": "240g",
+      "printTime": "Weighted tip-resistant base"
     }
   }
 ]

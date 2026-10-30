@@ -6,18 +6,18 @@ import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
-  Layers,
   MessageCircle,
   Home,
   Grid3X3,
   Sparkles,
   Mail,
   ChevronRight,
-  ExternalLink,
+  MapPin,
 } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { Container } from "@/components/layout/Container";
 import { buttonVariants } from "@/components/ui/button";
+import { getAssetPath } from "@/lib/utils";
 import { cn } from "cn";
 
 const navIcons = {
@@ -40,7 +40,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is active to prevent scroll leak / jumping
+  // Lock body scroll when mobile menu is active
   React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -62,26 +62,35 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xs py-3 sm:py-3.5 border-b border-mist-dark/50"
-          : "bg-transparent py-4 sm:py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-xs py-2.5 sm:py-3 border-b border-mist-dark/50"
+          : "bg-transparent py-3 sm:py-4"
       )}
     >
       <Container className="flex items-center justify-between w-full">
-        {/* Brand Logo */}
+        {/* Brand Logo & Name */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5 text-xl sm:text-2xl font-extrabold tracking-tight text-aubergine z-50"
+          className="group flex items-center gap-2.5 sm:gap-3 z-50 text-decoration-none"
         >
-          <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-aubergine text-amber transition-transform group-hover:scale-105 shadow-sm">
-            <Layers className="h-5 w-5" />
+          <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-aubergine-dark text-amber p-1.5 shadow-sm border border-amber/30 transition-transform group-hover:scale-105 shrink-0 overflow-hidden">
+            <img
+              src={getAssetPath("/images/logo/N.svg")}
+              alt="NEEV Additive Manufacturing Logo"
+              className="h-full w-full object-contain"
+            />
           </div>
-          <span className="flex items-center">
-            3D<span className="text-amber mx-0.5 font-black">•</span>Print Factory
-          </span>
+          <div className="flex flex-col text-left">
+            <span className="font-brand tracking-wider text-xl sm:text-2xl font-bold leading-none text-aubergine group-hover:text-aubergine-light transition-colors">
+              NEEV
+            </span>
+            <span className="font-heading text-[10px] sm:text-[11px] font-semibold tracking-wider text-aubergine/80 uppercase mt-0.5">
+              Additive Manufacturing
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+        <nav className="hidden md:flex items-center gap-7 lg:gap-9">
           {siteConfig.navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -91,8 +100,8 @@ export function Navbar() {
                 className={cn(
                   "relative text-sm lg:text-base font-semibold transition-colors py-1",
                   isActive
-                    ? "text-aubergine"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-aubergine font-bold"
+                    : "text-muted-foreground hover:text-aubergine"
                 )}
               >
                 {link.label}
@@ -104,23 +113,28 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Desktop Action Button */}
+        {/* Desktop Right CTAs: Stall Badge + WhatsApp */}
         <div className="hidden md:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber/15 text-aubergine-dark text-xs font-bold border border-amber/30">
+            <MapPin className="h-3.5 w-3.5 text-amber-dark" />
+            <span>Stall 16 • Mega Diwali Event</span>
+          </div>
+
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "default" }),
-              "bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-10 px-5 rounded-xl shadow-xs transition-all hover:shadow hover:scale-102 flex items-center gap-2"
+              "bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-10 px-4.5 rounded-xl shadow-xs transition-all hover:shadow hover:scale-102 flex items-center gap-2"
             )}
           >
             <MessageCircle className="h-4 w-4" />
-            <span>Inquire</span>
+            <span>WhatsApp</span>
           </a>
         </div>
 
-        {/* Custom High-Quality Mobile Menu Toggle Button */}
+        {/* Mobile Menu Toggle Button */}
         <button
           type="button"
           aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -132,13 +146,13 @@ export function Navbar() {
               ? "bg-aubergine text-white shadow-md"
               : scrolled
               ? "bg-mist/70 text-aubergine hover:bg-mist"
-              : "bg-white/80 text-aubergine shadow-xs backdrop-blur-xs hover:bg-white"
+              : "bg-white/85 text-aubergine shadow-xs backdrop-blur-xs hover:bg-white"
           )}
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
 
-        {/* Custom Slide-Down Mobile Drawer Navigation with Full Height & Backdrop */}
+        {/* Mobile Drawer Navigation Backdrop */}
         <div
           className={cn(
             "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden",
@@ -147,6 +161,7 @@ export function Navbar() {
           onClick={() => setIsOpen(false)}
         />
 
+        {/* Mobile Drawer Navigation Pane */}
         <div
           className={cn(
             "fixed top-0 right-0 bottom-0 z-45 w-[85vw] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out md:hidden flex flex-col justify-between p-6 pt-20 border-l border-mist-dark/40",
@@ -154,10 +169,13 @@ export function Navbar() {
           )}
         >
           {/* Top Section */}
-          <div className="space-y-6">
-            <div className="border-b border-mist pb-4">
+          <div className="space-y-5">
+            <div className="border-b border-mist pb-4 flex items-center justify-between">
               <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                Exhibition Navigation
+                Stall 16 • Newcastle, NSW
+              </span>
+              <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber/20 text-aubergine">
+                Live Event
               </span>
             </div>
 
@@ -205,14 +223,15 @@ export function Navbar() {
           </div>
 
           {/* Bottom Card / Contact CTA */}
-          <div className="pt-6 border-t border-mist space-y-4">
-            <div className="rounded-2xl bg-gradient-to-br from-mist-light to-mist/60 p-4 border border-mist-dark/50 space-y-1">
+          <div className="pt-5 border-t border-mist space-y-3.5">
+            {/* Instagram 10% Discount Reminder */}
+            <div className="rounded-2xl bg-gradient-to-br from-amber/15 via-mist-light to-white p-4 border border-amber/40 space-y-1 text-left">
               <div className="flex items-center gap-1.5 text-xs font-bold text-aubergine">
-                <Sparkles className="h-3.5 w-3.5 text-amber" />
-                <span>Visiting our Booth?</span>
+                <Sparkles className="h-3.5 w-3.5 text-amber-dark" />
+                <span>Grab 10% Off Today</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Ask our specialist on site for filament samples, color charts, or custom job quotes.
+                Follow <strong>@neev_au</strong> on Instagram &amp; comment on any reel to claim your discount at Stall 16!
               </p>
             </div>
 
@@ -226,12 +245,17 @@ export function Navbar() {
               )}
             >
               <MessageCircle className="h-4 w-4" />
-              <span>Direct WhatsApp Inquiry</span>
+              <span>Chat on WhatsApp (+61 491 600 869)</span>
             </a>
 
-            <p className="text-[11px] text-center text-muted-foreground font-medium">
-              3D Print Factory • Precision Additive Craft
-            </p>
+            <div className="text-center space-y-0.5">
+              <p className="font-brand text-xs font-bold tracking-wider text-aubergine">
+                NEEV ADDITIVE MANUFACTURING
+              </p>
+              <p className="font-heading text-[10px] text-muted-foreground">
+                Ideas, Made Real. • Central Coast, NSW
+              </p>
+            </div>
           </div>
         </div>
       </Container>
