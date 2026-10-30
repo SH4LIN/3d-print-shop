@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, MuseoModerno } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site-config";
+import { getAssetPath } from "@/lib/utils";
 import "./globals.css";
 
 // MuseoModerno for Headings & Tagline
@@ -34,6 +35,22 @@ export const metadata: Metadata = {
 		"Bambu Lab 3D printing",
 		"Custom 3D prints NSW",
 	],
+	icons: {
+		icon: [
+			{ url: getAssetPath("/favicon.ico"), sizes: "any" },
+			{ url: getAssetPath("/icon.png"), sizes: "512x512", type: "image/png" },
+		],
+		apple: [
+			{ url: getAssetPath("/apple-touch-icon.png"), sizes: "180x180", type: "image/png" },
+		],
+	},
+	openGraph: {
+		title: `${siteConfig.name} | ${siteConfig.tagline}`,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+		locale: "en_AU",
+		type: "website",
+	},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
