@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/home/HeroSection";
-import { ProcessSection } from "@/components/home/ProcessSection";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
+import { MaterialShowcase } from "@/components/home/MaterialShowcase";
+import { ProcessSection } from "@/components/home/ProcessSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { CTABanner } from "@/components/home/CTABanner";
 import productsData from "@/data/products.json";
@@ -12,8 +13,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <HeroSection />
-      <ProcessSection />
       <GalleryPreview products={products} />
+      <MaterialShowcase />
+      <ProcessSection />
       <FAQSection />
       <CTABanner />
     </div>
