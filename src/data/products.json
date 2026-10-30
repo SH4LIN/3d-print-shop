@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "name": "Articulated Dragon",
+    "category": "Figurines",
+    "description": "A beautifully detailed articulated dragon with movable joints. Each segment is precision-printed for smooth, satisfying movement. Available in multiple colors.",
+    "shortDescription": "Movable joints, precision-printed detail",
+    "image": "/images/products/placeholder-1.svg",
+    "featured": true,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "25cm x 10cm x 8cm",
+      "weight": "120g",
+      "printTime": "~8 hours"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Geometric Planter",
+    "category": "Home & Decor",
+    "description": "Modern geometric planter with a low-poly design. Perfect for succulents and small plants. Features a drainage hole and removable saucer.",
+    "shortDescription": "Low-poly modern design with drainage",
+    "image": "/images/products/placeholder-2.svg",
+    "featured": true,
+    "specs": {
+      "material": "PETG",
+      "dimensions": "12cm x 12cm x 10cm",
+      "weight": "85g",
+      "printTime": "~4 hours"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Fidget Gear Cube",
+    "category": "Gadgets",
+    "description": "An interlocking gear cube that spins and rotates in all directions. A perfect desk toy for focus and relaxation. Printed as a single piece — no assembly required.",
+    "shortDescription": "Single-piece print, all gears move",
+    "image": "/images/products/placeholder-3.svg",
+    "featured": true,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "6cm x 6cm x 6cm",
+      "weight": "45g",
+      "printTime": "~3 hours"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Flexi Rex",
+    "category": "Figurines",
+    "description": "The classic flexible T-Rex! A fun, articulated dinosaur that can bend and pose. A crowd favourite at every exhibition. Great for kids and collectors alike.",
+    "shortDescription": "Flexible, poseable T-Rex print",
+    "image": "/images/products/placeholder-4.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "20cm x 8cm x 12cm",
+      "weight": "95g",
+      "printTime": "~6 hours"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Cable Organizer Set",
+    "category": "Gadgets",
+    "description": "Keep your desk tidy with these clip-on cable organizers. Set includes 5 clips in various sizes to hold different cable thicknesses. Adhesive backing included.",
+    "shortDescription": "5-piece desk cable management set",
+    "image": "/images/products/placeholder-5.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "Various sizes",
+      "weight": "30g total",
+      "printTime": "~1.5 hours"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Hex Shelf Unit",
+    "category": "Home & Decor",
+    "description": "Honeycomb-shaped wall shelf that can be combined in any pattern. Mount multiple units to create a unique wall display. Holds lightweight items and small plants.",
+    "shortDescription": "Modular honeycomb wall display",
+    "image": "/images/products/placeholder-6.svg",
+    "featured": true,
+    "specs": {
+      "material": "PLA+",
+      "dimensions": "15cm x 13cm x 8cm",
+      "weight": "110g",
+      "printTime": "~5 hours"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Keychain Collection",
+    "category": "Gadgets",
+    "description": "A set of unique 3D printed keychains featuring geometric and pop-culture inspired designs. Lightweight, durable, and a great conversation starter.",
+    "shortDescription": "Unique geometric & pop-culture designs",
+    "image": "/images/products/placeholder-7.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "5cm x 3cm x 0.5cm",
+      "weight": "10g each",
+      "printTime": "~30 min each"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Lithophane Photo Frame",
+    "category": "Custom Prints",
+    "description": "Turn any photo into a stunning lithophane! When backlit, your photo appears in beautiful 3D relief. Custom-made from your image. A perfect personalised gift.",
+    "shortDescription": "Your photo in 3D-printed relief art",
+    "image": "/images/products/placeholder-8.svg",
+    "featured": true,
+    "specs": {
+      "material": "White PLA",
+      "dimensions": "15cm x 10cm x 0.3cm",
+      "weight": "40g",
+      "printTime": "~4 hours"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Mechanical Butterfly",
+    "category": "Figurines",
+    "description": "A delicate mechanical butterfly with wing mechanisms that actually move. Wind-up mechanism allows the wings to flutter. A true showcase of 3D printing precision.",
+    "shortDescription": "Wind-up fluttering wing mechanism",
+    "image": "/images/products/placeholder-9.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "12cm wingspan",
+      "weight": "25g",
+      "printTime": "~3.5 hours"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Desk Organizer Tower",
+    "category": "Home & Decor",
+    "description": "Multi-tier rotating desk organizer with compartments for pens, clips, sticky notes, and more. The lazy-susan base allows 360° rotation for easy access.",
+    "shortDescription": "Rotating multi-compartment desk tower",
+    "image": "/images/products/placeholder-10.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA+",
+      "dimensions": "12cm x 12cm x 20cm",
+      "weight": "180g",
+      "printTime": "~10 hours"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Phone Amplifier Stand",
+    "category": "Gadgets",
+    "description": "Acoustic phone amplifier that boosts your phone's speaker volume naturally — no batteries or electronics needed. Works by channeling sound through a curved horn design.",
+    "shortDescription": "Battery-free acoustic speaker boost",
+    "image": "/images/products/placeholder-11.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "18cm x 10cm x 8cm",
+      "weight": "90g",
+      "printTime": "~5 hours"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Custom Name Plate",
+    "category": "Custom Prints",
+    "description": "Personalised 3D name plate for your desk, door, or shelf. Choose your font style, color, and size. Makes a great gift or professional desk accessory.",
+    "shortDescription": "Personalised with your name & style",
+    "image": "/images/products/placeholder-12.svg",
+    "featured": false,
+    "specs": {
+      "material": "PLA",
+      "dimensions": "Custom sizing",
+      "weight": "Varies",
+      "printTime": "~2-4 hours"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#DDE3E8" rx="8"/>
+  <g transform="translate(200,180)">
+    <!-- 3D Cube -->
+    <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="none" stroke="#3A0F34" stroke-width="3"/>
+    <line x1="0" y1="-50" x2="0" y2="50" stroke="#3A0F34" stroke-width="2" opacity="0.5"/>
+    <line x1="-43" y1="-25" x2="43" y2="25" stroke="#3A0F34" stroke-width="2" opacity="0.5"/>
+    <line x1="43" y1="-25" x2="-43" y2="25" stroke="#3A0F34" stroke-width="2" opacity="0.5"/>
+  </g>
+  <text x="200" y="270" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#3A0F34" font-weight="600">Articulated Dragon</text>
+  <text x="200" y="295" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#3A0F34" opacity="0.6">#1</text>
+</svg>

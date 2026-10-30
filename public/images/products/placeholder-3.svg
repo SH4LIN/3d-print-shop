@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#DDE3E8" rx="8"/>
+  <g transform="translate(200,180)">
+    <!-- Gear shape -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#3A0F34" stroke-width="3"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#3A0F34" stroke-width="2"/>
+    <rect x="-5" y="-50" width="10" height="15" fill="#3A0F34" rx="2"/>
+    <rect x="-5" y="35" width="10" height="15" fill="#3A0F34" rx="2"/>
+    <rect x="-50" y="-5" width="15" height="10" fill="#3A0F34" rx="2"/>
+    <rect x="35" y="-5" width="15" height="10" fill="#3A0F34" rx="2"/>
+    <rect x="25" y="-40" width="10" height="15" fill="#3A0F34" rx="2" transform="rotate(45,30,-32)"/>
+    <rect x="-35" y="25" width="10" height="15" fill="#3A0F34" rx="2" transform="rotate(45,-30,32)"/>
+    <rect x="-35" y="-40" width="10" height="15" fill="#3A0F34" rx="2" transform="rotate(-45,-30,-32)"/>
+    <rect x="25" y="25" width="10" height="15" fill="#3A0F34" rx="2" transform="rotate(-45,30,32)"/>
+  </g>
+  <text x="200" y="270" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#3A0F34" font-weight="600">Fidget Gear Cube</text>
+  <text x="200" y="295" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#3A0F34" opacity="0.6">#3</text>
+</svg>
