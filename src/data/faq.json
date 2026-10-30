@@ -1,30 +1,30 @@
 [
-  {
-    "question": "Where is your exhibition stall located and can I purchase items immediately?",
-    "answer": "We are at Stall 16 at the Mega Diwali Event in Newcastle, NSW! All products showcased on our display table are fully finished and ready for immediate purchase. You can take them home today or ask our team for custom color variations."
-  },
-  {
-    "question": "How do I claim the 10% exhibition discount?",
-    "answer": "Simply follow our Instagram account (@neev_au) and leave a comment on any of our reels! Show your screen to us at Stall 16 (or send a screenshot via WhatsApp/Instagram DM), and we will immediately apply 10% off your entire order."
-  },
-  {
-    "question": "Can I bring my own 3D files (STL/OBJ) or Thingiverse/Printables links?",
-    "answer": "Yes, absolutely! We love custom projects. Whether you found a 3D model online on Thingiverse, MakerWorld, or Printables, or designed your own CAD file, simply send us the link or file via WhatsApp. We will inspect the geometry, advise on optimal print settings, and provide an instant quote."
-  },
-  {
-    "question": "What filament finishes and materials do you stock?",
-    "answer": "We maintain a wide range of specialized materials including Silk Dual-Tone & Rainbow (featured on our Shivling and Ram Mandir models), authentic Wood-filled & Copper-filled composites, non-reflective Matte Pastels, and high-impact engineering PETG."
-  },
-  {
-    "question": "What is the typical turnaround time for custom print jobs?",
-    "answer": "Custom print turnaround is usually 24 to 48 hours depending on the size and complexity of the model. For event orders placed during the exhibition weekend, we prioritize queue scheduling."
-  },
-  {
-    "question": "What are your delivery and pickup options?",
-    "answer": "We offer three flexible options: (1) Stall pickup before the Mega Diwali Event concludes, (2) Local pickup across the Central Coast, NSW, or (3) Tracked courier delivery shipped anywhere across Australia straight to your door."
-  },
-  {
-    "question": "What technology and printers do you use?",
-    "answer": "NEEV Additive Manufacturing was founded 3 years ago delivering precision B2B engineering prototypes. We run a multi-unit Bambu Lab high-speed multi-material additive manufacturing setup capable of ultra-fine 0.08mm layer stepping and seamless multi-color transitions using renewable plant-based biopolymers."
-  }
+	{
+		"question": "Where is your exhibition stall located and can I purchase items immediately?",
+		"answer": "We are at Stall 16 at the Mega Diwali Event in Newcastle, NSW! All products showcased on our display table are fully finished and ready for immediate purchase. You can take them home today or ask our team for custom color variations."
+	},
+	{
+		"question": "How do I claim the 10% exhibition discount?",
+		"answer": "Simply follow our Instagram account (@neev_au) and leave a comment on any of our reels! Show your screen to us at Stall 16 (or send a screenshot via WhatsApp/Instagram DM), and we will immediately apply 10% off your entire order."
+	},
+	{
+		"question": "Can I bring my own 3D files (STL/OBJ) or Thingiverse/Printables links?",
+		"answer": "Yes, absolutely! We love custom projects. Whether you found a 3D model online on Thingiverse, MakerWorld, or Printables, or designed your own CAD file, simply send us the link or file via WhatsApp. We will inspect the geometry, advise on optimal print settings, and provide an instant quote."
+	},
+	{
+		"question": "What filament finishes and materials do you stock?",
+		"answer": "We maintain a wide range of specialized materials including Silk Dual-Tone & Rainbow (featured on our Shivling and Ram Mandir models), authentic Wood-filled & Copper-filled composites, non-reflective Matte Pastels, and high-impact engineering PETG."
+	},
+	{
+		"question": "What is the typical turnaround time for custom print jobs?",
+		"answer": "Custom print turnaround is usually 24 to 48 hours depending on the size and complexity of the model. For event orders placed during the exhibition weekend, we prioritize queue scheduling."
+	},
+	{
+		"question": "What are your delivery and pickup options?",
+		"answer": "We offer three flexible options: (1) Stall pickup before the Mega Diwali Event concludes, (2) Local pickup across the Central Coast, NSW, or (3) Tracked courier delivery shipped anywhere across Australia straight to your door."
+	},
+	{
+		"question": "What technology and printers do you use?",
+		"answer": "NEEV Additive Manufacturing was founded 3 years ago delivering precision B2B engineering prototypes. We run a multi-unit Bambu Lab high-speed multi-material additive manufacturing setup capable of ultra-fine 0.08mm layer stepping and seamless multi-color transitions using renewable plant-based biopolymers."
+	}
 ]

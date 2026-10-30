@@ -8,16 +8,16 @@ import productsData from "@/data/products.json";
 import { Product } from "@/types";
 
 export default function HomePage() {
-  const products = productsData as Product[];
+	const products = productsData as Product[];
 
-  return (
-    <div className="flex flex-col">
-      <HeroSection />
-      <GalleryPreview products={products} />
-      <MaterialShowcase />
-      <ProcessSection />
-      <FAQSection />
-      <CTABanner />
-    </div>
-  );
+	return (
+		<div className="flex flex-col">
+			<HeroSection />
+			<GalleryPreview products={products} />
+			<MaterialShowcase />
+			<ProcessSection />
+			<FAQSection />
+			<CTABanner />
+		</div>
+	);
 }

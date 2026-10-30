@@ -4,15 +4,15 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Menu,
-  X,
-  MessageCircle,
-  Home,
-  Grid3X3,
-  Sparkles,
-  Mail,
-  ChevronRight,
-  MapPin,
+	Menu,
+	X,
+	MessageCircle,
+	Home,
+	Grid3X3,
+	Sparkles,
+	Mail,
+	ChevronRight,
+	MapPin,
 } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { Container } from "@/components/layout/Container";
@@ -21,41 +21,41 @@ import { getAssetPath } from "@/lib/utils";
 import { cn } from "cn";
 
 const navIcons = {
-  "/": Home,
-  "/catalogue": Grid3X3,
-  "/about": Sparkles,
-  "/contact": Mail,
+	"/": Home,
+	"/catalogue": Grid3X3,
+	"/about": Sparkles,
+	"/contact": Mail,
 };
 
 export function Navbar() {
-  const [scrolled, setScrolled] = React.useState(false);
-  const [isOpen, setIsOpen] = React.useState(false);
-  const pathname = usePathname();
+	const [scrolled, setScrolled] = React.useState(false);
+	const [isOpen, setIsOpen] = React.useState(false);
+	const pathname = usePathname();
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+	React.useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 20);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
-  // Lock body scroll when mobile menu is active
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+	// Lock body scroll when mobile menu is active
+	React.useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isOpen]);
 
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp.number.replace(
-    /[^0-9]/g,
-    ""
-  )}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`;
+	const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp.number.replace(
+		/[^0-9]/g,
+		""
+	)}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`;
 
 	return (
 		<>
@@ -214,8 +214,7 @@ export function Navbar() {
 					<nav className="flex flex-col gap-2 pt-1">
 						{siteConfig.navLinks.map((link) => {
 							const isActive = pathname === link.href;
-							const Icon =
-								navIcons[link.href as keyof typeof navIcons] || Grid3X3;
+							const Icon = navIcons[link.href as keyof typeof navIcons] || Grid3X3;
 
 							return (
 								<Link
@@ -263,7 +262,8 @@ export function Navbar() {
 							<span>Grab 10% Off Today</span>
 						</div>
 						<p className="text-xs text-muted-foreground leading-relaxed">
-							Follow <strong>@neev_au</strong> on Instagram &amp; comment on any reel to claim your discount at Stall 16!
+							Follow <strong>@neev_au</strong> on Instagram &amp; comment on any reel
+							to claim your discount at Stall 16!
 						</p>
 					</div>
 
@@ -276,9 +276,13 @@ export function Navbar() {
 							"w-full bg-amber text-aubergine-dark hover:bg-amber-light font-bold text-sm h-12 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all"
 						)}
 					>
-						<MessageCircle className="h-4 w-4" />
-						<span>Chat on WhatsApp (+61 491 600 869)</span>
+						<MessageCircle className="h-4.5 w-4.5 shrink-0" />
+						<span>Chat on WhatsApp</span>
 					</a>
+					<p className="text-center text-[11px] text-muted-foreground font-medium">
+						Direct Stall Inquiries:{" "}
+						<span className="font-bold text-aubergine">+61 491 600 869</span>
+					</p>
 
 					<div className="text-center space-y-0.5">
 						<p className="font-brand text-xs font-bold tracking-wider text-aubergine">
