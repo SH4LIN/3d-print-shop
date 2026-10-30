@@ -40,6 +40,9 @@ export function ProductCard({ product }: ProductCardProps) {
 						alt={product.name}
 						width={400}
 						height={400}
+						loading="lazy"
+						decoding="async"
+						sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 						className="h-full w-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-108 group-hover:drop-shadow-xl"
 					/>
 
@@ -113,7 +116,8 @@ export function ProductCard({ product }: ProductCardProps) {
 								alt={product.name}
 								width={500}
 								height={500}
-								priority
+								loading="lazy"
+								decoding="async"
 								className="h-full w-full max-h-56 sm:max-h-72 md:max-h-80 object-contain drop-shadow-xl"
 							/>
 							<div className="absolute top-4 left-4 flex flex-wrap gap-2">

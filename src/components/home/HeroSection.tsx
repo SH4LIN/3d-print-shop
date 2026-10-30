@@ -216,11 +216,12 @@ export function HeroSection() {
 							{/* Product Visual Container with Clean Cutout */}
 							<div className="my-4 rounded-2xl bg-gradient-to-b from-white/15 to-white/5 p-4 flex items-center justify-center relative border border-white/10 aspect-4/3 overflow-hidden">
 								<Image
-									src={getAssetPath("/images/products/shivling-clean.png")}
+									src={getAssetPath("/images/products/shivling-clean.webp")}
 									alt="Sacred Shiva Lingam (Shivling) 3D Print"
 									width={400}
 									height={400}
 									priority
+									fetchPriority="high"
 									className="h-full w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
 								/>
 								<Badge className="absolute bottom-3 left-3 bg-aubergine-dark/90 text-amber border border-amber/40 text-[11px] font-bold">
